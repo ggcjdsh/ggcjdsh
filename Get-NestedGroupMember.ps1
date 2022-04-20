@@ -5,13 +5,15 @@ function Get-NestedGroupMember{
 .DESCRIPTION
     The Get-NestedGroupMember function return all nested group members of a AD group to a hash.
     It requires a valid AD group parameter and a hash variable parameter.
-    For e.g. There are 4 Groups A,B,C,D,A contains B & C, B contains C. 
+    For e.g. There are 4 Groups A,B,C,D.A contains B & C, B contains D. 
     Given a $MyHash hash variable. run below ,
     Get-NestedGroupMember -GroupName A -Hash $MyHash
     $MyHash
     Key: value
     A:{B,C}
     B:{D}
+    C:{$null}
+    D:{$null}
 .PARAMETER GroupName
     Prompts you valid active directory group name. You can use P1 as an alias.
     The parameter can be a single string or string array.
@@ -33,6 +35,8 @@ function Get-NestedGroupMember{
     Key: value
     A:{B,C}
     B:{D}
+    C:{$null}
+    D:{$null}
 
 #>
 [CmdletBinding()]
