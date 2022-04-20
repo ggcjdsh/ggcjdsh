@@ -7,6 +7,8 @@ The Get-NestedGroupMember function return all nested group members of a AD group
     Key: value
     A:{B,C}
     B:{D}
+    C:{$null}
+    D:{$null}
 
 - 👋 Hi, I’m @ggcjdsh
 - 👀 I’m interested in PS
