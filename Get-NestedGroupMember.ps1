@@ -100,4 +100,4 @@ else {
 # example
 $MyHash=[ordered]@{}
 $grps = ("grpl1")
-get-childgroup -GroupName $grps -Hash $MyHash | Out-Null
+Get-NestedGroupMember -GroupName $grps -Hash $MyHash | Out-Null
